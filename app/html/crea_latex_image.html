@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea Flashcard - DoodleHTR</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Immagine simbolo del sito -->
+    <div class="header1">
+        <a href="index.html"> <img src="../images/doodle_logo_s.png" class="logo" alt="logo DoodleHTR"> </a>
+    </div>
+
+    <!-- Contenitore flessibile con due form affiancati -->
+    <center>
+
+        <!-- Secondo Form -->
+        <div class="form-container">
+            <h1>Da Immagini a LaTeX</h1>
+            <form action="submit_form.php" method="POST" enctype="multipart/form-data">
+                <label for="image">Carica le immagini dei tuoi appunti:</label>
+                <input type="file" class="input1" id="image" name="image[]" accept="image/*" multiple required>
+                <p class = "input1">Come vuoi ricevere l'output?</p>
+                <div class="flex-container">
+                <div class = "radio">
+                    <label for="LaTeX">Codice LaTeX  </label>
+                    <input type="radio" class = "input1" id="LaTeX" name="mode" value="LaTeX">
+                </div><br>
+                <div class="radio">
+                    <label for="PDF">Documento PDF  </label>
+                    <input type="radio" class = "input1" id="PDF" name="mode" value="PDF">
+                </div>
+                </div>
+                <input type="submit" value="Invia">
+            </form>
+        </div>
+    </div>
+
+    </center>
+    <br><br><br>
+
+</body>
+</html>

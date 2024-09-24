@@ -1,0 +1,17 @@
+{
+  "name": "doodle_htr",
+  "productName": "DoodleHTR",
+  "version": "1.0.0",
+  "description": "Ai Powered Education",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Anonim8s",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "electron": "^32.1.2",
+    "openai": "^4.63.0"
+  }
+}

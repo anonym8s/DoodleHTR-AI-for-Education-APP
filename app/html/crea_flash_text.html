@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea Flashcard - DoodleHTR</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    
+
+    <!-- Immagine simbolo del sito -->
+    <div class="header1">
+        <a href="index.html"> <img src="../images/doodle_logo_s.png" class="logo" alt="logo DoodleHTR"> </a>
+    </div>
+
+    <!-- Contenitore flessibile con due form affiancati -->
+    <center>
+    <div class="flex-container">
+        <!-- Primo Form -->
+        <div class="form-container">
+            <h1>Da Testo a Flashcard</h1>
+            <form id="prompt_form">
+                <label for="prompt">Inserisci gli appunti:</label>
+                <input type="text" class="input1" id="prompt" name="prompt" placeholder="Lorem Ipsum..." maxlength="5000" required>
+
+                <label for="text1">Inserisci la materia:</label>
+                <input type="text" class="input1" id="subject" name="subject" placeholder="Materia" maxlength="25" required>
+
+                <label for="text2">Inserisci l'argomento:</label>
+                <input type="text" class="input1" id="argument" name="argument" placeholder="Argomento" maxlength="25" required>
+
+                <label for="number">Inserisci il numero di Flashcard da creare:</label>
+                <input type="number" class="input1" id="number" name="number" value="5" min="1" max="20" required>
+
+                <input type="submit" id="btn-form" value = "Crea">
+                <!-- Add this below the form or anywhere appropriate -->
+                <div id="loadingMessage" style="display: none;">
+                    <p>Generating flashcards, please wait...</p>
+                </div>
+  
+            </form>
+        </div>
+    </div>
+    
+    <a href="exam_home.html"><button id="ExamButton"><b>Vai all'esercitazione</b></button></a>
+    </center>
+    <br><br><br>
+
+    <script src="../js/crea_flash_text.js"></script>
+</body>
+</html>

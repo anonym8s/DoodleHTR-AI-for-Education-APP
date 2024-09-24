@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercitazione - DoodleHTR</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Immagine simbolo del sito -->
+    <div class="header1">
+        <a href="index.html"> <img src="../images/doodle_logo.png" class="logo" alt="logo DoodleHTR"> </a>
+    </div>
+
+    <!-- Card con effetto di ribaltamento -->
+    <div class="card" id="flip-card">
+        <div class="card-inner">
+            <div class="card-front">
+                <div>Testo in alto e ben visibile</div>
+                <div class="click-instruction">Clicca per girare e vedere la risposta</div>
+            </div>
+            <div class="card-back">
+                <div>Risposta</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const card = document.getElementById('flip-card');
+        
+        card.addEventListener('click', function() {
+            card.classList.toggle('flipped');
+        });
+    </script>
+
+</body>
+</html>
