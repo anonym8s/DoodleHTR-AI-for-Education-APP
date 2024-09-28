@@ -238,7 +238,8 @@ p {
     font-size: 1.2em;
     color: #FFD700;
 }
-.form-container input[type="submit"] {
+.form-container input[type="submit"], 
+.form-container input[type="button"] {
     width: 20%;
     border-radius: 5px;
     background-color: #e4c324;

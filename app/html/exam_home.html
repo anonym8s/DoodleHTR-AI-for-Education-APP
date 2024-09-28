@@ -19,17 +19,18 @@
         <!-- Secondo Form -->
         <div class="form-container">
             <h1>ESERCITAZIONE</h1>
-                <form action="submit_form.php" method="POST" enctype="multipart/form-data">
+            <form id="flashcard_form" enctype="multipart/form-data">
                 <label for="image">Carica le flashcard generate da DoodleHTR:</label>
                 <input type="file" class="input1" id="flash" name="flash[]" multiple required>
-                <input type="submit" value="Esercitati">
+                <input type="button" id="submitBtn" value="Esercitati">
             </form>
+            
         </div>
     </div>
     <br><br>
     <a href="crea_flash_menu.html"><button id="ExamButton"><b>Crea Flashcard</b></button></a>
     </center>
     <br><br><br>
-
+    <script src="../js/read_flashcard.js"></script>
 </body>
 </html>

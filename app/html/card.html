@@ -5,34 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esercitazione - DoodleHTR</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Immagine simbolo del sito -->
     <div class="header1">
         <a href="index.html"> <img src="../images/doodle_logo.png" class="logo" alt="logo DoodleHTR"> </a>
     </div>
 
-    <!-- Card con effetto di ribaltamento -->
     <div class="card" id="flip-card">
         <div class="card-inner">
             <div class="card-front">
-                <div>Testo in alto e ben visibile</div>
+                <div id="question">Domanda</div>
                 <div class="click-instruction">Clicca per girare e vedere la risposta</div>
             </div>
-            <div class="card-back">
-                <div>Risposta</div>
+            <div class="card-back hidden">
+                <div id="answer">Risposta</div>
             </div>
         </div>
     </div>
 
+    <button id="prevBtn">Previous</button>
+    <button id="nextBtn">Next</button>
+
     <script>
         const card = document.getElementById('flip-card');
-        
+        const questionElement = document.getElementById('question');
+        const answerElement = document.getElementById('answer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+    
+        let flashcards = JSON.parse(localStorage.getItem('flashcards')) || [];
+        let currentIndex = 0;
+    
+        function updateCard() {
+            if (flashcards.length > 0) {
+                questionElement.innerText = flashcards[currentIndex][0];
+                answerElement.innerText = flashcards[currentIndex][1];
+    
+                // Reset the card to show the front
+                card.classList.remove('flipped');
+                document.querySelector('.card-back').classList.add('hidden');
+            }
+        }
+    
         card.addEventListener('click', function() {
             card.classList.toggle('flipped');
+            document.querySelector('.card-back').classList.toggle('hidden');
         });
+    
+        prevBtn.addEventListener('click', function() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCard();
+            }
+        });
+    
+        nextBtn.addEventListener('click', function() {
+            if (currentIndex < flashcards.length - 1) {
+                currentIndex++;
+                updateCard();
+            }
+        });
+    
+        // Initialize the card display
+        updateCard();
     </script>
+    
 
 </body>
 </html>
