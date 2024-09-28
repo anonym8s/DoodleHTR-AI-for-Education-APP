@@ -13,5 +13,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
   },
   showSaveDialog: (defaultFileName) => {
     return ipcRenderer.invoke('save-dialog', defaultFileName);
+  },
+  generateLatex: (prompt) => {
+    return ipcRenderer.invoke("generate-latex", { prompt })
   }
 });

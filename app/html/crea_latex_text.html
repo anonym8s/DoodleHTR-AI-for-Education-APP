@@ -21,21 +21,13 @@
             <h1>Da Testo a LaTeX</h1>
             <form action="submit_form.php" method="POST" enctype="multipart/form-data">
                 <label for="image">Inserisci gli appunti:</label>
-                <input type="text" class="input1" id="prompt" name="prompt" placeholder="Lorem Ipsum..." required>
+                <input type="text" class="input1" id="prompt" name="prompt" placeholder="Inserisci Testo..." required>
 
-                <p class = "input1">Come vuoi ricevere l'output?</p>
-                <div class="flex-container">
-                <div class = "radio">
-                    <label for="LaTeX">Codice LaTeX  </label>
-                    <input type="radio" class = "input1" id="LaTeX" name="mode" value="LaTeX">
-                </div><br>
-                <div class="radio">
-                    <label for="PDF">Documento PDF  </label>
-                    <input type="radio" class = "input1" id="PDF" name="mode" value="PDF">
+                <input type="button" id="genera_latex" value="Genera Codice LaTeX">
+                <input type="button" id="genera_pdf" value="Genera File Pdf">
+                <div id="loadingMessage" style="display: none;"></div>
+                    <p>Creando il file LaTeX...</p>
                 </div>
-                </div>
-
-                <input type="submit" value="Invia">
             </form>
         </div>
 
@@ -44,6 +36,6 @@
 
     </center>
     <br><br><br>
-
+    <script src="../js/crea_latex.js"></script>
 </body>
 </html>

@@ -68,7 +68,7 @@ app.on("window-all-closed", () => {
 
 
 
-// Handle the OpenAI request
+// Handle the OpenAI request for generate flashcards
 ipcMain.handle('generate-flashcards', async (event, { prompt, materia, argomento, n }) => {
   const systemPrompt = `
     Sei un utile assistente per lo studio. Devi creare ${n} flashcard
@@ -106,4 +106,31 @@ ipcMain.handle('save-dialog', async (event, defaultFileName) => {
   });
   
   return filePath; // Return the path where the user wants to save the file
+});
+
+
+// Handle the OpenAI request for latex
+ipcMain.handle('generate-latex', async (event, { prompt }) => {
+  const systemPrompt = `
+    Sei un bravo generatore di codice latex. Adesso ti fornirò i 
+    miei appunti, potresti generare un codice latex dettagliato
+    di essi. Mi raccomando restituisci in output SOLTANTO il codice
+    latex senza altre parole. Non scrivere '\`\`\`latex' o simili,
+    sia all'inizio che \`\`\` alla fine.
+  `;
+
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: prompt }
+      ]
+    });
+
+    return completion.choices[0].message.content;
+  } catch (error) {
+    console.error('Error generating latex:', error);
+    throw error;
+  }
 });
