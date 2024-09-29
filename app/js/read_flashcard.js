@@ -5,8 +5,8 @@ function handleFiles() {
   const files = fileInput.files;
 
   if (files.length === 0) {
-      alert('No files selected.');
-      return;
+    alert('No files selected.');
+    return;
   }
 
   let mergedContents = [];
@@ -14,51 +14,50 @@ function handleFiles() {
   let fileReadPromises = [];
 
   for (let i = 0; i < files.length; i++) {
-      const file = files[i];
+    const file = files[i];
 
-      if (file.type === "text/csv" || file.name.endsWith('.csv')) {
-          const fileReadPromise = new Promise((resolve, reject) => {
-              const reader = new FileReader();
+    if (file.type === "text/csv" || file.name.endsWith('.csv')) {
+      const fileReadPromise = new Promise((resolve, reject) => {
+        const reader = new FileReader();
 
-              reader.onload = function(event) {
-                  const fileContent = event.target.result;
-                  const parsedCsvContent = getCsvContent(fileContent);
-                  resolve(parsedCsvContent);
-              };
+        reader.onload = function (event) {
+          const fileContent = event.target.result;
+          const parsedCsvContent = getCsvContent(fileContent);
+          resolve(parsedCsvContent);
+        };
 
-              reader.onerror = function(error) {
-                  reject(error);
-              };
+        reader.onerror = function (error) {
+          reject(error);
+        };
 
-              reader.readAsText(file);
-          });
+        reader.readAsText(file);
+      });
 
-          fileReadPromises.push(fileReadPromise);
-      } else {
-          alert(`File ${file.name} is not a CSV file.`);
-      }
+      fileReadPromises.push(fileReadPromise);
+    } else {
+      alert(`File ${file.name} is not a CSV file.`);
+    }
   }
 
   Promise.all(fileReadPromises)
-      .then((results) => {
-          results.forEach((csvData) => {
-              mergedContents = mergedContents.concat(csvData);
-          });
-
-          mergedContents = shuffleArray(mergedContents);
-          // console.log(mergedContents)
-
-          // Store the merged contents in localStorage
-          localStorage.setItem('flashcards', JSON.stringify(mergedContents));
-
-          // Navigate to card.html
-          window.location.href = 'card.html';
-      })
-      .catch((error) => {
-          console.error("Error reading files:", error);
+    .then((results) => {
+      results.forEach((csvData) => {
+        mergedContents = mergedContents.concat(csvData);
       });
-}
 
+      mergedContents = shuffleArray(mergedContents);
+      // console.log(mergedContents)
+
+      // Store the merged contents in localStorage
+      localStorage.setItem('flashcards', JSON.stringify(mergedContents));
+
+      // Navigate to card.html
+      window.location.href = 'card.html';
+    })
+    .catch((error) => {
+      console.error("Error reading files:", error);
+    });
+}
 
 
 function getCsvContent(csvContent) {
@@ -71,20 +70,19 @@ function getCsvContent(csvContent) {
   let content = [];
 
   rows.forEach((row) => {
-      // Use regex to capture the question and answer correctly
-      const match = row.match(/^"(.*?)","(.*?)"$/);
-      if (match) {
-          const question = match[1]; // First capturing group for the question
-          const answer = match[2]; // Second capturing group for the answer
-          content.push([question, answer]); // Push as an array
-      } else {
-          console.warn(`Row not in expected format: ${row}`);
-      }
+    // Use regex to capture the question and answer correctly
+    const match = row.match(/^"(.*?)","(.*?)"$/);
+    if (match) {
+      const question = match[1]; // First capturing group for the question
+      const answer = match[2]; // Second capturing group for the answer
+      content.push([question, answer]); // Push as an array
+    } else {
+      console.warn(`Row not in expected format: ${row}`);
+    }
   });
 
   return content;
 }
-
 
 
 function shuffleArray(array) {

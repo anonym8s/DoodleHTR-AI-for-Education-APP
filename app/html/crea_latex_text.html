@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crea Flashcard - DoodleHTR</title>
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crea Flashcard - DoodleHTR</title>
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
+  <!-- Immagine simbolo del sito -->
+  <div class="header1">
+    <a href="index.html"> <img src="../images/doodle_logo_s.png" class="logo" alt="logo DoodleHTR"> </a>
+  </div>
 
-    <!-- Immagine simbolo del sito -->
-    <div class="header1">
-        <a href="index.html"> <img src="../images/doodle_logo_s.png" class="logo" alt="logo DoodleHTR"> </a>
-    </div>
-
-    <!-- Contenitore flessibile con due form affiancati -->
-    <center>
+  <!-- Contenitore flessibile con due form affiancati -->
+  <center>
     <div class="flex-container">
-        <!-- Primo Form -->
-        <div class="form-container">
-            <h1>Da Testo a LaTeX</h1>
-            <form action="submit_form.php" method="POST" enctype="multipart/form-data">
-                <label for="image">Inserisci gli appunti:</label>
-                <input type="text" class="input1" id="prompt" name="prompt" placeholder="Inserisci Testo..." required>
+      <!-- Primo Form -->
+      <div class="form-container">
+        <h1>Da Testo a LaTeX</h1>
+        <form action="submit_form.php" method="POST" enctype="multipart/form-data">
+          <label for="image">Inserisci gli appunti:</label>
+          <input type="text" class="input1" id="prompt" name="prompt" placeholder="Inserisci Testo..." required>
 
-                <input type="button" id="genera_latex" value="Genera Codice LaTeX">
-                <input type="button" id="genera_pdf" value="Genera File Pdf">
-                <div id="loadingMessage" style="display: none;"></div>
-                    <p>Creando il file LaTeX...</p>
-                </div>
-            </form>
-        </div>
+          <input type="button" id="genera_latex" value="Genera Codice LaTeX">
+          <input type="button" id="genera_pdf" value="Genera File Pdf">
+          <div id="loadingMessage" style="display: none;"></div>
+          <p>Creando il file LaTeX...</p>
+        </form>
+      </div>
+    </div>
 
 
     </div>
 
-    </center>
-    <br><br><br>
-    <script src="../js/crea_latex.js"></script>
+  </center>
+  <br><br><br>
+  <script src="../js/crea_latex.js"></script>
 </body>
+
 </html>

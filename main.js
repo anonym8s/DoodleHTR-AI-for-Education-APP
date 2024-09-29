@@ -15,7 +15,7 @@ function createMainWindow() {
     width: 1280,
     height: 900,
     webPreferences: {
-      preload: path.join(__dirname,"app","js", 'preload.js'),
+      preload: path.join(__dirname, "app", "js", 'preload.js'),
       contextIsolation: true,  // For security, keep this true
       nodeIntegration: false,  // Keep this false for security
       sandbox: false, // Set this to false to ensure `fs` can be used in preload
@@ -104,7 +104,7 @@ ipcMain.handle('save-dialog', async (event, defaultFileName) => {
       { name: 'CSV Files', extensions: ['csv'] }
     ]
   });
-  
+
   return filePath; // Return the path where the user wants to save the file
 });
 

@@ -1,4 +1,4 @@
-document.getElementById('prompt_form').addEventListener('submit', async function(e) {
+document.getElementById('prompt_form').addEventListener('submit', async function (e) {
   e.preventDefault();
 
   const prompt = document.getElementById('prompt').value;
@@ -12,7 +12,7 @@ document.getElementById('prompt_form').addEventListener('submit', async function
 
     // Call OpenAI via the exposed API
     const flashcardContent = await window.electronAPI.generateFlashcards(prompt, subject, argument, number);
-    
+
     // Parse the flashcards JSON returned from OpenAI
     const flashcards = JSON.parse(flashcardContent).flashcards;
 
@@ -34,7 +34,7 @@ document.getElementById('prompt_form').addEventListener('submit', async function
     } else {
       console.log('Save operation was canceled by the user.');
     }
-    
+
   } catch (error) {
     console.error('Error generating flashcards:', error);
   } finally {

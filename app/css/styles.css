@@ -1,300 +1,363 @@
 body {
-    background-color: #171717;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  background-color: #171717;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
+
 .header {
-    position: relative; /* Needed to position the logo within the header */
-    background-image: url("../images/banner/bg_banner.jpg");
-    background-size: cover; /* Ensures the background image covers the entire header */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 40px;
-    height: 400px; /* Set the height based on your banner image */
+  position: relative;
+  /* Needed to position the logo within the header */
+  background-image: url("../images/banner/bg_banner.jpg");
+  background-size: cover;
+  /* Ensures the background image covers the entire header */
+  background-position: center;
+  /* Centers the background image */
+  background-repeat: no-repeat;
+  /* Prevents the background image from repeating */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+  height: 400px;
+  /* Set the height based on your banner image */
 }
 
 .header img {
-    position: absolute; /* Allows positioning the logo */
-    bottom: 5%; /* Adjusts the distance from the bottom of the header */
-    left: 5%; /* Adjusts the distance from the left side of the header */
-    width: 30%;
-    max-width: 30%;
-    height: auto;
+  position: absolute;
+  /* Allows positioning the logo */
+  bottom: 5%;
+  /* Adjusts the distance from the bottom of the header */
+  left: 5%;
+  /* Adjusts the distance from the left side of the header */
+  width: 30%;
+  max-width: 30%;
+  height: auto;
 }
-.header img:hover{
-    transform: scale(1.05);
+
+.header img:hover {
+  transform: scale(1.05);
 }
+
 .header1 {
-    position: relative; /* Needed to position the logo within the header */
-    background-image: url("../images/banner/bg_banner1.jpg");
-    background-size: cover; /* Ensures the background image covers the entire header */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 40px;
-    height: 80px; /* Set the height based on your banner image */
+  position: relative;
+  /* Needed to position the logo within the header */
+  background-image: url("../images/banner/bg_banner1.jpg");
+  background-size: cover;
+  /* Ensures the background image covers the entire header */
+  background-position: center;
+  /* Centers the background image */
+  background-repeat: no-repeat;
+  /* Prevents the background image from repeating */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+  height: 80px;
+  /* Set the height based on your banner image */
 }
 
 .header1 img {
-    position: absolute; /* Allows positioning the logo */
-    top: 5%; /* Adjusts the distance from the top of the header */
-    left: 5%; /* Adjusts the distance from the left side of the header */
-    bottom: 5%; /* Adjusts the distance from the bottom of the header */
-    width: auto; /* Allows flexibility in width */
-    max-width: 30%;
-    height: auto; /* Maintains the aspect ratio */
-    margin: auto; /* Centers the image vertically */
+  position: absolute;
+  /* Allows positioning the logo */
+  top: 5%;
+  /* Adjusts the distance from the top of the header */
+  left: 5%;
+  /* Adjusts the distance from the left side of the header */
+  bottom: 5%;
+  /* Adjusts the distance from the bottom of the header */
+  width: auto;
+  /* Allows flexibility in width */
+  max-width: 30%;
+  height: auto;
+  /* Maintains the aspect ratio */
+  margin: auto;
+  /* Centers the image vertically */
 }
 
-.header1 img:hover{
-    transform: scale(1.05);
+.header1 img:hover {
+  transform: scale(1.05);
 }
+
 .image-row {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
+
 .image-row a {
-    margin: 0 15px;
+  margin: 0 15px;
 }
+
 .image-row img {
-    max-width: 300px;
-    border: 4px solid #e4c324; /* Bordi gialli */
-    border-radius: 8px;
-    transition: transform 0.2s;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Ombra alle immagini */
+  max-width: 300px;
+  border: 4px solid #e4c324;
+  /* Bordi gialli */
+  border-radius: 8px;
+  transition: transform 0.2s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  /* Ombra alle immagini */
 }
+
 .image-row img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .card {
-    width: 600px;
-    height: 400px;
-    perspective: 1000px;
-    margin: 20px auto;
+  width: 600px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 20px auto;
 }
+
 .card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    border-radius: 15px; /* Bordi arrotondati */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 15px;
+  /* Bordi arrotondati */
 }
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #000;
-    border-radius: 15px; /* Bordi arrotondati */
-}
-.card-front {
-    background-color: #fff;
-}
+
+.card-front,
 .card-back {
-    background-color: #e4c324;
-    transform: rotateY(180deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #000;
+  border-radius: 15px;
+  /* Bordi arrotondati */
 }
+
+.card-front {
+  background-color: #fff;
+}
+
+.card-back {
+  background-color: #e4c324;
+  transform: rotateY(180deg);
+}
+
 .card.flipped .card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
+
 .click-instruction {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 12px;
-    color: #333;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #333;
 }
 
 
 /* crea_latex.html */
 .flex-container {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* Distanza tra i due div */
-    margin-bottom: 50px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  /* Distanza tra i due div */
+  margin-bottom: 50px;
 }
+
 .form-container {
-    background-color: #262626;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    width: 40%;
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  width: 40%;
 }
+
 .form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
 /* Custom radio button styling */
 .form-container input[type="radio"] {
-    appearance: none;
-    width: 40px;
-    height: 40px;
-    background-color: #e4c324;
-    border: 5px solid #FFD700;
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
-    transition: background-color 0.3s, border 0.3s;
-    position: relative; /* Ensure position alignment */
-    margin-right: 10px; /* Space between the radio button and label */
-    margin-top: 20px;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  background-color: #e4c324;
+  border: 5px solid #FFD700;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.3s;
+  position: relative;
+  /* Ensure position alignment */
+  margin-right: 10px;
+  /* Space between the radio button and label */
+  margin-top: 20px;
 }
 
 .form-container input[type="radio"]:checked {
-    background-color: #171717;
-    border-color: #FFD700;
+  background-color: #171717;
+  border-color: #FFD700;
 }
 
 .form-container input[type="radio"]:hover {
-    background-color: #372f00;
+  background-color: #372f00;
 }
 
 /* Styling for labels associated with the radio buttons */
 .form-container label {
-    display: flex;
-    align-items: center; /* Ensure label text aligns vertically with radio buttons */
-    background-color: transparent;
-    color: #FFD700;
-    padding: 1px;
-    border-radius: 5px;
-    width: auto;
-    font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  /* Ensure label text aligns vertically with radio buttons */
+  background-color: transparent;
+  color: #FFD700;
+  padding: 1px;
+  border-radius: 5px;
+  width: auto;
+  font-size: 1.2em;
 }
 
 .form-container label[for="LaTeX"],
 .form-container label[for="PDF"] {
-    padding: 10px;
-    border-radius: 5px;
-    border:2px solid #151515;
-    width: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    font-size: 1em;
-    background-color: #FFD700;
-    color: #151515;
-    align-self: center;
-    font-weight: bold; /* Makes the text bold */
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #151515;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  background-color: #FFD700;
+  color: #151515;
+  align-self: center;
+  font-weight: bold;
+  /* Makes the text bold */
 }
+
 .form-container label[for="LaTeX"]:hover,
 .form-container label[for="PDF"]:hover {
-    padding: 10px;
-    border-radius: 5px;
-    border:2px solid #FFD700;
-    width: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    font-size: 1em;
-    background-color: #151515;
-    color: #FFD700;
-    align-self: center;
-    font-weight: bold; /* Makes the text bold */
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #FFD700;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  background-color: #151515;
+  color: #FFD700;
+  align-self: center;
+  font-weight: bold;
+  /* Makes the text bold */
 }
+
 .form-container h1 {
-    border: 5px solid #FFD700;
-    padding: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 300%;
-    background-image: url("../images/base.jpg");
-    background-size: cover; /* Ensures the background image covers the entire header */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    color: #FFD700;
-    text-shadow: 0 4px 8px rgb(0, 0, 0);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
-    height: 120px; /* Set the height based on your banner image */
-    align-items: center; /* Vertical alignment */
-    justify-content: center; /* Horizontal alignment */
-    display: flex;
+  border: 5px solid #FFD700;
+  padding: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 300%;
+  background-image: url("../images/base.jpg");
+  background-size: cover;
+  /* Ensures the background image covers the entire header */
+  background-position: center;
+  /* Centers the background image */
+  background-repeat: no-repeat;
+  /* Prevents the background image from repeating */
+  color: #FFD700;
+  text-shadow: 0 4px 8px rgb(0, 0, 0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  height: 120px;
+  /* Set the height based on your banner image */
+  align-items: center;
+  /* Vertical alignment */
+  justify-content: center;
+  /* Horizontal alignment */
+  display: flex;
 }
+
 .form-container input[type="text"],
 .form-container input[type="description"],
 .form-container input[type="number"],
-.form-container input[type="file"]{
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    width: 95%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    font-size: 1em;
-    background-color: white;
+.form-container input[type="file"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 95%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  background-color: white;
 }
+
 p {
-    font-size: medium;
-    text-align: left;
-    font-size: 1.2em;
-    color: #FFD700;
+  font-size: medium;
+  text-align: left;
+  font-size: 1.2em;
+  color: #FFD700;
 }
-.form-container input[type="submit"], 
+
+.form-container input[type="submit"],
 .form-container input[type="button"] {
-    width: 20%;
-    border-radius: 5px;
-    background-color: #e4c324;
-    border: none;
-    padding: 10px;
-    color: #171717;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  width: 20%;
+  border-radius: 5px;
+  background-color: #e4c324;
+  border: none;
+  padding: 10px;
+  color: #171717;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
+
 .form-container input[type="submit"]:hover {
-    background-color: #c1a517;
-    transform: scale(1.05);
+  background-color: #c1a517;
+  transform: scale(1.05);
 }
 
-button{
-    width: 600px;
-    border-radius: 5px;
-    background-color: #e4c324;
-    border: none;
-    padding: 10px;
-    color: #171717;
-    font-size: 2.2em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-bottom: 40px;
+button {
+  width: 600px;
+  border-radius: 5px;
+  background-color: #e4c324;
+  border: none;
+  padding: 10px;
+  color: #171717;
+  font-size: 2.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 40px;
 }
 
-button:hover{
-    background-color: #c1a517;
-    transform: scale(1.02);
+button:hover {
+  background-color: #c1a517;
+  transform: scale(1.02);
 }
 
 
 #loadingMessage {
-    display: none;
-    text-align: center;
-    font-size: 18px;
-    color: #FFD700;
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  color: #FFD700;
+}
+
+#loadingMessage::after {
+  content: " ";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  border: 4px solid #FFD700;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  #loadingMessage::after {
-    content: " ";
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-    border: 4px solid #FFD700;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+
+  100% {
+    transform: rotate(360deg);
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
+}

@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crea Flashcard - DoodleHTR</title>
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crea Flashcard - DoodleHTR</title>
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
 
-    <!-- Immagine simbolo del sito -->
-    <div class="header1">
-        <a href="index.html"> <img src="../images/doodle_logo_s.png" class="logo" alt="logo DoodleHTR"> </a>
+  <!-- Immagine simbolo del sito -->
+  <div class="header1">
+    <a href="index.html"> <img src="../images/doodle_logo_s.png" class="logo" alt="logo DoodleHTR"> </a>
+  </div>
+
+  <!-- Contenitore flessibile con due form affiancati -->
+  <center>
+
+    <!-- Secondo Form -->
+    <div class="form-container">
+      <h1>ESERCITAZIONE</h1>
+      <form id="flashcard_form" enctype="multipart/form-data">
+        <label for="image">Carica le flashcard generate da DoodleHTR:</label>
+        <input type="file" class="input1" id="flash" name="flash[]" multiple required>
+        <input type="button" id="submitBtn" value="Esercitati">
+      </form>
+
     </div>
-
-    <!-- Contenitore flessibile con due form affiancati -->
-    <center>
-
-        <!-- Secondo Form -->
-        <div class="form-container">
-            <h1>ESERCITAZIONE</h1>
-            <form id="flashcard_form" enctype="multipart/form-data">
-                <label for="image">Carica le flashcard generate da DoodleHTR:</label>
-                <input type="file" class="input1" id="flash" name="flash[]" multiple required>
-                <input type="button" id="submitBtn" value="Esercitati">
-            </form>
-            
-        </div>
     </div>
     <br><br>
     <a href="crea_flash_menu.html"><button id="ExamButton"><b>Crea Flashcard</b></button></a>
-    </center>
-    <br><br><br>
-    <script src="../js/read_flashcard.js"></script>
+  </center>
+  <br><br><br>
+  <script src="../js/read_flashcard.js"></script>
 </body>
+
 </html>
