@@ -102,6 +102,64 @@ body {
   transform: scale(1.05);
 }
 
+.LATbtn {
+  width: 250px !important;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.LATbtn:hover {
+  background-color: #a78f18 !important;
+  transform: scale(1.05);
+}
+
+.LATbtnCONT{
+  display: flex;
+  justify-content: center; /* Centers buttons horizontally */
+  gap: 20px; /* Adds space between buttons */
+  padding: 10px;
+}
+
+.arrow {
+  width: 298px;
+  height: 150px;
+  background-size: cover;
+  /* Ensures the background image covers the entire header */
+  background-position: center;
+  /* Centers the background image */
+  background-repeat: no-repeat;
+  /* Prevents the background image from repeating */
+  background-color: rgba(0,0,0,0);
+  padding:20px;
+}
+
+.arrow.right{
+  background-image: url("../images/rightarr.png");
+}
+
+.arrow.left{
+  background-image: url("../images/leftarr.png");
+}
+
+.arrow:hover {
+  background-color: rgba(0,0,0,0);
+  filter: brightness(.85)
+}
+
+.arrow:active {
+  background-color: rgba(0,0,0,0);
+  filter: brightness(.8);
+  transform: scale(1.05);
+}
+
+.arrow.left:hover {
+  rotate: -5deg;
+}
+
+.arrow.right:hover {
+  rotate: 5deg;
+}
+
 .card {
   width: 600px;
   height: 400px;
@@ -220,6 +278,10 @@ body {
   font-size: 1.2em;
 }
 
+.select_mode_blur {
+  filter: blur(4px)
+}
+
 .form-container label[for="LaTeX"],
 .form-container label[for="PDF"] {
   padding: 10px;
@@ -277,7 +339,6 @@ body {
 }
 
 .form-container input[type="text"],
-.form-container input[type="description"],
 .form-container input[type="number"],
 .form-container input[type="file"] {
   padding: 10px;
@@ -287,6 +348,26 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   font-size: 1em;
   background-color: white;
+}
+
+.container {
+  width: 100%; /* Larghezza fissa per il contenitore */
+}
+
+.input1 {
+  width: 100%; /* Larghezza fissa rispetto al contenitore */
+  height: auto; /* Altezza automatica */
+  min-height: 60px; /* Altezza minima */
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 95%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  background-color: white;
+  overflow: hidden; /* Nasconde la scrollbar */
+  resize: none; /* Disabilita il ridimensionamento */
+  border: 1px solid #ccc; /* Bordo per la textarea */
 }
 
 p {
@@ -309,9 +390,10 @@ p {
   transition: background-color 0.3s;
 }
 
-.form-container input[type="submit"]:hover {
-  background-color: #c1a517;
-  transform: scale(1.05);
+.form-container input[type="submit"]:hover,
+.form-container input[type="button"]:hover {
+  background-color: #c1a517 !important;
+  transform: scale(1.05) !important;
 }
 
 button {

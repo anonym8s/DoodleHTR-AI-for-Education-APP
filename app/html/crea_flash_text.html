@@ -22,18 +22,19 @@
         <h1>Da Testo a Flashcard</h1>
         <form id="prompt_form">
           <label for="prompt">Inserisci gli appunti:</label>
-          <input type="text" class="input1" id="prompt" name="prompt" placeholder="Lorem Ipsum..." maxlength="5000"
-            required>
+          <div class="container">
+            <textarea class="input1" id="prompt" name="prompt" placeholder="Lorem Ipsum..." maxlength="5000" required></textarea>
+          </div>
 
           <label for="text1">Inserisci la materia:</label>
-          <input type="text" class="input1" id="subject" name="subject" placeholder="Materia" maxlength="25" required>
+          <input type="text" id="subject" name="subject" placeholder="Materia" maxlength="25" required>
 
           <label for="text2">Inserisci l'argomento:</label>
-          <input type="text" class="input1" id="argument" name="argument" placeholder="Argomento" maxlength="25"
+          <input type="text" id="argument" name="argument" placeholder="Argomento" maxlength="25"
             required>
 
           <label for="number">Inserisci il numero di Flashcard da creare:</label>
-          <input type="number" class="input1" id="number" name="number" value="5" min="1" max="20" required>
+          <input type="number" id="number" name="number" value="5" min="1" max="20" required>
 
           <input type="submit" id="btn-form" value="Crea">
           <!-- Add this below the form or anywhere appropriate -->
@@ -50,6 +51,21 @@
   <br><br><br>
 
   <script src="../js/crea_flash_text.js"></script>
+  <script>
+    const input = document.getElementById('prompt');
+
+    // Funzione per ridimensionare l'altezza del textarea
+    function resizeInput() {
+        input.style.height = 'auto'; // Resetta l'altezza per misurare correttamente
+        input.style.height = input.scrollHeight + 'px'; // Imposta l'altezza in base al contenuto
+    }
+
+    // Aggiungi l'evento 'input' per ridimensionare quando l'utente scrive
+    input.addEventListener('input', resizeInput);
+
+    // Ridimensiona all'avvio nel caso ci sia del testo predefinito
+    resizeInput();
+</script>
 </body>
 
 </html>

@@ -12,6 +12,6 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "electron": "^32.1.2",
-    "openai": "^4.63.0"
+    "openai": "^4.67.0"
   }
 }

@@ -22,12 +22,16 @@
         <h1>Da Testo a LaTeX</h1>
         <form action="submit_form.php" method="POST" enctype="multipart/form-data">
           <label for="image">Inserisci gli appunti:</label>
-          <input type="text" class="input1" id="prompt" name="prompt" placeholder="Inserisci Testo..." required>
-
-          <input type="button" id="genera_latex" value="Genera Codice LaTeX">
-          <input type="button" id="genera_pdf" value="Genera File Pdf">
-          <div id="loadingMessage" style="display: none;"></div>
-          <p>Creando il file LaTeX...</p>
+          <div class="container">
+            <textarea class="input1" id="prompt" name="prompt" placeholder="Lorem Ipsum..." maxlength="5000" required></textarea>
+          </div>
+          <div class="LATbtnCONT">
+            <input type="button" class="LATbtn" id="genera_latex" value="Genera Codice LaTeX">
+            <input type="button" class="LATbtn" id="genera_pdf" value="Genera File Pdf">
+          </div>
+          <div id="loadingMessage" style="display: none;">
+            <p>Creando il file LaTeX...</p>
+          </div>
         </form>
       </div>
     </div>
