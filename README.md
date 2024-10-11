@@ -22,4 +22,43 @@ DoodleHTR is an app that helps you transform your notes into interactive and org
 - Convert your notes (text or images) into well-structured PDF files using LaTeX.
 - You can also obtain the raw LaTeX code to further customize the output.
 
-### 4. More Features Coming Soon
+### *Coming soon:*
+- HTR/OCR recognition of your notes
+- English language
+- LaTeX compiling
+
+## *Warning*
+For now the APP is only optimized for the italian language 🇮🇹.
+
+## *How to Start*
+- clone this repository
+- create a .env file with your OpenAI Key (Example: `OPENAI_API_KEY = "sk-your-openai-key"`)
+- put the .env file in the same folder as `main.js`
+- install the requirements in node:
+  `npm install dotenv`
+  `npm install openai`
+  `npm install electron`
+- open main folder with your IDE and type in the terminal `npm start`
+
+## *How to Use features*
+
+### *Create Flashcards*
+- From the home page click on `crea flashcard`
+- Click on `crea flashcard da testo`
+- Type in your prompt (notes), subject and argument
+- Click on `crea`
+- Download csv file with the flashcard
+- Now share your flashards if you want, or keep it for yoursself to exercitate.
+
+### *Exercise with Flashcards*
+- From the home page click on `esercitazioni flashcard`
+- Upload multiple csv files with your generated flashcards
+- Click on `esercitati`
+- Now you can click on the flashcard to reveal the answer, or navigate through the flashcards with previous or next buttons.
+
+### *Generate LaTeX*
+- From the home page click on `crea documento latex`
+- Click on `crea latex da testo`
+- Type in your prompt (notes)
+- Click on `crea`
+- Download txt file with your LaTeX code.
