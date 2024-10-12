@@ -14,6 +14,7 @@ function createMainWindow() {
     title: "DoodleHTR",
     width: 1280,
     height: 900,
+    icon: `${__dirname}/app/assets/icons/Icon_256x256.png`,
     webPreferences: {
       preload: path.join(__dirname, "app", "js", 'preload.js'),
       contextIsolation: true,  // For security, keep this true
