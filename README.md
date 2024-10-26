@@ -2,7 +2,8 @@
 
 # **DoodleHTR**
 
-**AI powered Education** - An Electron-based app designed to enhance your study methods with the help of artificial intelligence.
+**AI powered Education** - An Electron-based app designed to enhance your study methods with the help of artificial intelligence. 
+
 
 
 ## *Description*
