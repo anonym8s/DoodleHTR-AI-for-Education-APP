@@ -5,6 +5,7 @@
 **AI powered Education** - An Electron-based app designed to enhance your study methods with the help of artificial intelligence. 
 
 
+
 ## *Description*
 
 DoodleHTR is an app that helps you transform your notes into interactive and organized study tools. Using AI, it generates flashcards and LaTeX files from plain text or images of your notes. Perfect for students and educators, DoodleHTR simplifies the study process and makes it easy to create academic materials.
